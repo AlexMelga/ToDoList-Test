@@ -16,6 +16,7 @@ export class TasksComponent implements OnInit {
     filterTask: Task = { _id: undefined, id: undefined, description: undefined, isResolved: undefined, attached_file: undefined};
     filters: {} = {};
     editTask: Task;
+    editDesc: false;
     filterID: false;
     filterDesc: false;
     filterStatus: false;
@@ -90,6 +91,8 @@ export class TasksComponent implements OnInit {
     // Update task is being edited
     update(showMsg: boolean) {
         if (this.editTask) {
+            this.editDesc = false;
+
             this.taskService.updateTask(this.editTask).subscribe(task => {
                if (showMsg) {
                     this.toastr.success(`Se modificó la tarea "ID ${this.editTask.id} - ${this.editTask.description}"`, 'Tarea modificada');

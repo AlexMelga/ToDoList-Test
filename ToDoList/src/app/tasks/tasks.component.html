@@ -55,9 +55,9 @@
                     {{task.id}}
                 </th>
                 <td>
-                    <a (click)="edit(task)">
+                    <a (click)="edit(task); editDesc = true;">
                         <span *ngIf="task!==editTask">{{ task.description }}</span>
-                        <input *ngIf="task===editTask" [(ngModel)]="task.description" (blur)="update()" (keyup.enter)="update()">
+                        <input *ngIf="task===editTask && editDesc" [(ngModel)]="task.description" (blur)="update(true)" (keyup.enter)="update(true)">
                     </a>
                 </td>
                 <td class="text-center">
