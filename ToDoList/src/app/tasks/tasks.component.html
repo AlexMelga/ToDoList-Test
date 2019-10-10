@@ -1,0 +1,89 @@
+<form #form class="form-horizontal animated fadeIn" (submit)="add(taskTitle.value); taskTitle.value=''; taskTitle.focus();">
+    <div class=" row">
+        <input #taskTitle class="form-control" placeholder="Nombre de la tarea" autofocus>
+    </div>
+    <div class="form-group row">
+        <button type="button" class="btn btn-dark col-md-1" title="Adjuntar archivo" (click)="$event.preventDefault(); addTaskFile.click();">
+                                <i class="fa fa-paperclip"></i>
+                            </button>
+        <input type="file" style="display:none" #addTaskFile id="file" (change)="addFile($event); taskTitle.focus();">
+
+        <div class="col-md-5" id="current-pane" *ngIf="selectedFile">
+            <a href="#current-pane" class="close" (click)="clearFile(); taskTitle.focus();" data-dismiss="alert" aria-label="close" id="hide">&times;</a>{{selectedFile.name}}
+        </div>
+    </div>
+    <div class="form-group row">
+        <input type="submit" value="Agregar tarea" class="btn btn-success btn-lg btn-block">
+    </div>
+</form>
+<div class="table-responsive-xl text-nowrap">
+    <table class="table table-striped table-fixed animated fadeIn">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">
+                    <a (click)="filterID = true;">
+                        <span *ngIf="!filterID">ID<span *ngIf="filterTask.id">: "{{filterTask.id}}"</span></span>
+                        <input type="search" style="width: 100%" placeholder="ID" *ngIf="filterID" [(ngModel)]="filterTask.id" (blur)="getTasks(); filterID = false;" (keyup.enter)="getTasks(); filterID = false;">
+                    </a>
+                </th>
+                <th scope="col">
+                    <a (click)="filterDesc = true;">
+                        <span *ngIf="!filterDesc">Descripción<span *ngIf="filterTask.description">: "{{filterTask.description}}"</span></span>
+                        <input type="search" style="width: 100%" placeholder="Descripción" *ngIf="filterDesc" [(ngModel)]="filterTask.description" (blur)="getTasks(); filterDesc = false;" (keyup.enter)="getTasks(); filterDesc = false;">
+                    </a>
+                </th>
+                <th scope="col" class="text-center">
+                    <a (click)="filterStatus = true;">
+
+                        <span *ngIf="!filterStatus && !filterTask.isResolved">¿Resuelta?</span>
+                        <span *ngIf="!filterStatus && filterTask.isResolved === 'true'">Resueltas</span>
+                        <span *ngIf="!filterStatus && filterTask.isResolved === 'false'">Pendientes</span>
+
+                        <select #opt style="width: 100%" *ngIf="filterStatus" [(ngModel)]="filterTask.isResolved" (change)="getTasks(); filterStatus = false;" (blur)="filterStatus = false">
+                                    <option value="" selected>Todas</option>
+                                    <option value="true">Resueltas</option>
+                                    <option value="false">Pendientes</option>
+                                </select>
+                    </a>
+                </th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of tasks" [ngClass]="{'table-active': !task.isResolved, 'table-success': task.isResolved}">
+                <th scope="col">
+                    {{task.id}}
+                </th>
+                <td>
+                    <a (click)="edit(task)">
+                        <span *ngIf="task!==editTask">{{ task.description }}</span>
+                        <input *ngIf="task===editTask" [(ngModel)]="task.description" (blur)="update()" (keyup.enter)="update()">
+                    </a>
+                </td>
+                <td class="text-center">
+                    <input type="checkbox" name="isResolved" [(ngModel)]="task.isResolved" value="true" (change)="resolved($event, task)">
+                </td>
+                <td class="text-right">
+                    <button *ngIf="task.attached_file" class="btn btn-default" title="Descargar archivo" (click)="downloadFile(task)">
+                                <i class="fa fa-download"></i>
+                            </button>
+                    <button *ngIf="!task.attached_file" class="btn btn-default" title="Adjuntar archivo" (click)="taskFile.click()">
+                                    <i class="fa fa-paperclip"></i>
+                                </button>
+                    <button *ngIf="task.attached_file" class="btn btn-default" title="Eliminar archivo" (click)="deleteFile($event, task)">
+                                    <i class="fa fa-eraser"></i>
+                                </button>
+                    <input type="file" style="display:none" #taskFile id="file" (change)="onFileChange($event, task)">
+                    <button class="btn btn-default" title="Borrar tarea" (click)="delete(task)">
+                                <i class="fa fa-trash-o fa-lg"></i>
+                            </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="card card-body bg-light text-center">
+    <span class="small">Click en encabezado de columna para aplicar filtro</span>
+    <span class="small">Click en item para editar y click en cualquier otro lado para actualizar</span>
+</div>
