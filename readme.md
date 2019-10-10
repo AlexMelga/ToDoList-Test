@@ -1,4 +1,4 @@
-Descripción y contexto
+## Descripción y contexto
 
 Se desarrolló una aplicación que sirve para crear una lista de tareas.
 
