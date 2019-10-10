@@ -48,21 +48,21 @@ Las funcionalidades son las descriptas a continuación:
 	c) El archivo se elimina y se muestra mensaje de confirmación.
 	
 ##### 6) Filtros: Se permite el filtrado por ID, Descripción y/o estado. Tener en cuenta que los filtros pueden ser multiples (Por ej.: se puede filtrar a la vez por ID y Descripción)
-	###### 6.1 - Filtro por ID:
+	 6.1 - Filtro por ID:
 		a) Hacer click en encabezado de columna ID. Aparecerá una caja de texto.
 		b) Ingresar ID a buscar (Puede ser sólo el primer dígito) y presionar tecla Enter.
 		c) Si hay IDs de tarea que comiencen con los dígitos ingresados, se mostrarán en la lista.
 		d) Para quitar el filtro se debe volver a hacer click en encabezado de columna ID. Una vez aparece la caja de texto, se debe presionar la "x" que está al costado (o borrar el contenido) y presionar la tecla Enter.
 		e) Se puede salir del modo filtro haciendo click en la caja de texto y luego en cualquier otro lado de la pantalla.
 	
-	###### 6.2 - Filtro por Descripción:
+	 6.2 - Filtro por Descripción:
 		a) Hacer click en encabezado de columna Descripción. Aparecerá una caja de texto.
 		b) Ingresar Descripción a buscar y presionar tecla Enter.
 		c) Si hay tareas que en su descripción contengan las letras ingresadas, se mostrarán en la lista.
 		d) Para quitar el filtro se debe volver a hacer click en encabezado de columna Descripción. Una vez aparece la caja de texto, se debe presionar la "x" que está al costado (o borrar el contenido) y presionar la tecla Enter.
 		e) Se puede salir del modo filtro haciendo click en la caja de texto y luego en cualquier otro lado de la pantalla.
 	
-	###### 6.3 - Filtro por estado:
+	 6.3 - Filtro por estado:
 		a) Hacer click en encabezado de columna ¿Resuelta?. Aparecerá una selector de opciones que muestra 3 opciones:
 			- Todas: muestra todas las tareas.
 			- Resueltas: muestra solo las tareas marcadas como resueltas.
@@ -83,10 +83,15 @@ La aplicación consta de 2 proyectos:
 
 ###### Pasos para su utilización:
 1 - Descargar código fuente de ambos proyectos
+
 2 - Abrir consola en directorio de proyecto "TasksApi" y ejecutar los siguientes comandos (Se instalan las dependencias y se inicia el proyecto en puerto 3000):
+
 npm i
 node server.js
+
 Abrir consola en directorio de proyecto "ToDoList" y ejecutar los siguientes comandos (Se instalan las dependencias y se inicia el proyecto en puerto 4200):
+
 npm i
 ng serve
+
 3 - La aplicación estará accesible en http://localhost:4200/# ToDoList-Test
