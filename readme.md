@@ -95,6 +95,8 @@ Abrir consola en directorio de proyecto "ToDoList" y ejecutar los siguientes com
 
 npm i
 
+npm install -g @angular/cli
+
 ng serve
 
 3 - La aplicación estará accesible en http://localhost:4200/# ToDoList-Test
