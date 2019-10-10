@@ -80,7 +80,7 @@ La aplicación consta de 2 proyectos:
 ###### Requisitos:
 - Sistema Operativo Windows 7 o superior
 - NodeJS 10.16.3 (Npm será instalado tambien).
-- Servidor MongoDB local: Debe escuchar en puerto 27017 del localhost.
+- Servidor MongoDB 4.2.0: Debe escuchar en puerto 27017 del localhost.
 
 ###### Pasos para su utilización:
 1 - Descargar código fuente de ambos proyectos
