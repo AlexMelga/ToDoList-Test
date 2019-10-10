@@ -87,11 +87,13 @@ La aplicación consta de 2 proyectos:
 2 - Abrir consola en directorio de proyecto "TasksApi" y ejecutar los siguientes comandos (Se instalan las dependencias y se inicia el proyecto en puerto 3000):
 
 npm i
+
 node server.js
 
 Abrir consola en directorio de proyecto "ToDoList" y ejecutar los siguientes comandos (Se instalan las dependencias y se inicia el proyecto en puerto 4200):
 
 npm i
+
 ng serve
 
 3 - La aplicación estará accesible en http://localhost:4200/# ToDoList-Test
