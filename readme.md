@@ -99,4 +99,4 @@ npm install -g @angular/cli
 
 ng serve
 
-3 - La aplicación estará accesible en http://localhost:4200/# ToDoList-Test
+3 - La aplicación estará accesible en http://localhost:4200/
