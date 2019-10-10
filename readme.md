@@ -1,4 +1,4 @@
-## Descripción y contexto
+### Descripción y contexto
 
 Se desarrolló una aplicación que sirve para crear una lista de tareas.
 
@@ -15,23 +15,23 @@ Las funcionalidades son las descriptas a continuación:
 -Filtrado de tareas por ID, Descripción y/o estado.
 
 ------------------------------------------------------------------------------------------------------------------
-Guía de usuario
+### Guía de usuario
 
 - La pantalla inicial muestra el listado de todas las tareas y posibilita el ingreso de nuevas.
 
-1) Creación de una nueva tarea:
+###### 1) Creación de una nueva tarea:
 	a) Posicionarse sobre la caja de texto que dice "Nombre de la tarea".
 	b) Escribir descripción de la tarea.
 	c) Si desea adjuntar un archivo puede hacer click en botón con icono de un clip y seleccionar el archivo de su computadora. En caso de que desee quitar el archivo que seleccionó, debe hacer click en la "x" que aparece junto al nombre del archivo seleccionado previamente.
 	d) Presionar botón Enter o hacer click sobre el botón "Agregar tarea".
 	e) La tarea se crea y se agrega primera en la lista de tareas. Se muestra mensaje confirmando creación.
 
-2) Eliminación de una tarea
+###### 2) Eliminación de una tarea
 	a) Ubicar en la lista la tarea que se desea eliminar
 	b) Presionar el botón con icono de un tacho de basura que se encuentra al lado de la descripción de la tarea.
 	c) La tarea se elimina y se muestra mensaje de confirmación.
 
-3) Adjuntar archivo a una tarea (sólo disponible para aquellas que no tienen un archivo)
+##### 3) Adjuntar archivo a una tarea (sólo disponible para aquellas que no tienen un archivo)
 	a) Ubicar en la lista la tarea a la que se desea adjuntar archivo.
 	b) Hacer click en botón con icono de un clip.
 	c) Seleccionar archivo de su computadora.
