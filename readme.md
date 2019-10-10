@@ -78,6 +78,7 @@ La aplicación consta de 2 proyectos:
 - Proyecto "ToDoList" que contiene una aplicación cliente desarrollada con Angular y Typescript.
 
 ###### Requisitos:
+- Sistema Operativo Windows 7 o superior
 - NodeJS 10.16.3 (Npm será instalado tambien).
 - Servidor MongoDB local: Debe escuchar en puerto 27017 del localhost.
 
