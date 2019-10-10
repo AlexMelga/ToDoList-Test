@@ -66,6 +66,7 @@ Guía de usuario
 
 ------------------------------------------------------------------------------------------------------------------
 Guía de instalación
+
 La aplicación consta de 2 proyectos:
 - Proyecto "TasksApi" que contiene una API REST programada en nodeJS.
 - Proyecto "ToDoList" que contiene una aplicación cliente desarrollada con Angular y Typescript.
