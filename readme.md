@@ -1,11 +1,17 @@
 Descripción y contexto
 
 Se desarrolló una aplicación que sirve para crear una lista de tareas.
+
 Las funcionalidades son las descriptas a continuación:
+
 -Creación de tareas sin limite de cantidad.
+
 -Adjuntar archivo en la creación de la tarea.
+
 -Listado de tareas que contiene columnas de: ID, Descripción, Estado, Acciones (Borrar tarea, Adjuntar archivo, Eliminar archivo, Descargar archivo segun el caso).
+
 -Marcar una tarea como resuelta (o pasarla a pendiente nuevamente).
+
 -Filtrado de tareas por ID, Descripción y/o estado.
 
 ------------------------------------------------------------------------------------------------------------------
